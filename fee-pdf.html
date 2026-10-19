@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JHL Law College - Fee Structure 2026-27</title>
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box}body{margin:0;background:#eef0f7;font-family:Arial,Helvetica,sans-serif;color:#152459}
+.bar{position:sticky;top:0;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;padding:12px;background:#152459;color:#fff;font-size:14px}
+.bar a,.bar button{background:#c9a227;color:#0d1638;border:0;border-radius:8px;padding:9px 18px;font:700 14px Arial;text-decoration:none;cursor:pointer}
+.bar a.b{background:transparent;color:#fff;border:1.5px solid #fff}
+.sheet{width:210mm;max-width:100%;margin:18px auto;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.sheet img{display:block;width:100%;height:auto}
+@media print{body{background:#fff}.bar,.hint{display:none}.sheet{margin:0;width:210mm;box-shadow:none;page-break-after:avoid}.sheet img{width:210mm;max-height:297mm;object-fit:contain}}
+</style></head><body>
+<div class="bar"><span id="t">Fee Structure</span><button onclick="window.print()">Save as PDF</button><a class="b" href="fee-structure.html">&larr; Back</a></div>
+<div class="sheet"><img id="im" alt="Fee structure"></div>
+<script>
+var base='https://jhllawcollege.com/wp-content/uploads/2026/06/';
+var files={1:'1-732x1024.jpeg',2:'2-713x1024.jpeg',3:'3-716x1024.jpeg'};
+var n=parseInt(new URLSearchParams(location.search).get('n'),10);if(!files[n])n=1;
+document.title='JHL-Law-College-Fee-Structure-2026-27-Sheet-'+n;
+document.getElementById('t').textContent='FRA \u2013 Fee Structure 2026\u201327 \u2014 Sheet '+n;
+var im=document.getElementById('im');im.onload=function(){setTimeout(function(){window.print()},400)};im.src=base+files[n];
+</script></body></html>
